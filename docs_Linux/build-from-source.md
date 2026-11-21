@@ -39,8 +39,8 @@ tar -xf Python-3.XX.X.tgz
 make -j $(nproc)
 ```
 > [!TIP]
-> `-j` option sets the number of cores to use for the build.  
-> `nproc` can get the number of cpu cores.
+> - `-j` option sets the number of cores to use for the build.
+> - `nproc` can get the number of cpu cores.
 
 ## Install
 ```
