@@ -48,7 +48,8 @@ make install
 ```
 
 ## Add to the PATH
+Add an alias setting to the `.bashrc` file.
 ```
-
+alias python='~/user/.python/3.xx/bin/python'
 ```
 
