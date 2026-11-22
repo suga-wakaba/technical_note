@@ -16,6 +16,8 @@ apt install -y build-essential
 ## Install Build Tools
 ### Red Hat
 ```
+dnf group install development-tools
+dnf group install c-development
 dnf install -y openssl-devel bzip2-devel libffi-devel xz-devel sqlite-devel readline-devel ncurses-devel tk-devel zlib-devel libuuid-devel
 ```
 ### Debian
