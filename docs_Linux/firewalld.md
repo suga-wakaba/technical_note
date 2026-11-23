@@ -1,6 +1,10 @@
 # Firewall
 
 ## `firewall-cmd` Cheat Sheet
+### Check Zone
+```
+firewall-cmd --get-active-zones
+```
 ### Drop ICMP Echo Request(ping)
 ```
 firewall-cmd --permanent --zone=public --add-rich-rule='rule icmp-type name="echo-request" drop'
