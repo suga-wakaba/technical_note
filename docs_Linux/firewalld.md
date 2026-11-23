@@ -5,6 +5,10 @@
 ```
 firewall-cmd --get-active-zones
 ```
+> [!NOTE]
+> - The `public` zone is a common configuration, but that depends on the OS.
+> - For example, Fedora desktop sets `FedoraWorkstation` as the default.
+
 ### Drop ICMP Echo Request(ping)
 ```
 firewall-cmd --permanent --zone=public --add-rich-rule='rule icmp-type name="echo-request" drop'
