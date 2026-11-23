@@ -29,6 +29,7 @@ try {
 // 取得したレコードを表形式で出力
 for ($i = 0; $i < count($rows); $i++) {
     echo htmlspecialchars($rows[$i]["id"]) . "   " . htmlspecialchars($rows[$i]["name"]) . "\n";
+}
 ```
 
 ## Python
