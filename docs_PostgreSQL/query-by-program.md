@@ -6,9 +6,9 @@
 <?php
 $DB_HOST = "localhost";
 $DB_PORT = "5432";
-$DB_DBNAME = "rocky";
-$DB_USER = "rocky";
-$DB_PASSWORD = "1009";
+$DB_DBNAME = "test_db";
+$DB_USER = "user";
+$DB_PASSWORD = "password";
 $DB_TABLE = "users";
 ```
 ### test.php
