@@ -1,22 +1,29 @@
 # Query by Program
 
 ## PHP
+### db_config.php
 ```
 <?php
-// PostgreSQLへの接続設定
-$host = "localhost";
-$port = "5432";
-$dbname = "test_db";
-$user = "username";
-$password = "password";
+$DB_HOST = "localhost";
+$DB_PORT = "5432";
+$DB_DBNAME = "rocky";
+$DB_USER = "rocky";
+$DB_PASSWORD = "1009";
+$DB_TABLE = "users";
+```
+### test.php
+```
+<?php
+// １階層上に設定ファイルを配置（DocumentRoot外へのDB情報の保存を想定）
+require_once __DIR__ . '/../db_config.php';
 
 try {
     // データベースに接続
-    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
-    $pdo = new PDO($dsn, $user, $password);
+    $dsn = "pgsql:host=$DB_HOST;port=$DB_PORT;dbname=$DB_DBNAME";
+    $pdo = new PDO($dsn, $DB_USER, $DB_PASSWORD);
 
     // SQL実行
-    $sql = "select id, name from test_table";
+    $sql = "select id, name from $DB_TABLE";
     $stmt = $pdo->query($sql);
 
     // レコード取得
@@ -28,7 +35,7 @@ try {
 
 // 取得したレコードを表形式で出力
 for ($i = 0; $i < count($rows); $i++) {
-    echo htmlspecialchars($rows[$i]["id"]) . "   " . htmlspecialchars($rows[$i]["name"]) . "\n";
+    echo htmlspecialchars($rows[$i]["id"]) . "   " . htmlspecialchars($rows[$i]["name"]) . "<br>\n";
 }
 ```
 
